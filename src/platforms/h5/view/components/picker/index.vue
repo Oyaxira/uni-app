@@ -28,13 +28,13 @@
             class="uni-picker-action uni-picker-action-cancel"
             @click="_cancel"
           >
-            取消
+            {{ cancel_text }}
           </div>
           <div
             class="uni-picker-action uni-picker-action-confirm"
             @click="_change"
           >
-            确定
+            {{ confirm_text }}
           </div>
         </div>
         <v-uni-picker-view
@@ -167,6 +167,14 @@ export default {
     disabled: {
       type: [Boolean, String],
       default: false
+    },
+    cancel_text: {
+      type: String,
+      default: '取消'
+    },
+    confirm_text: {
+      type: String,
+      default: '确认'
     }
   },
   data () {
